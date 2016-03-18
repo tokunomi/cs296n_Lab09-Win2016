@@ -1,0 +1,22 @@
+﻿@model CommInfo.Models.LogInViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@Html.ActionLink("Register", "Register") @*| @Html.ActionLink("Manage User Role", "ManageUserRoles")*@
+<hr />
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.EditorForModel()
+    </p>
+    
+    <p>
+        <button type="submit">Log In</button>
+    </p>
+}
